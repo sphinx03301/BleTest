@@ -1,0 +1,25 @@
+namespace SDKTemplate
+{
+    enum NotifyType
+    {
+        StatusMessage,
+        ErrorMessage,
+        ConnectMessage,
+        FoundMessage,
+        DiscMessage,
+        DisapMessage
+    };
+
+    [default_interface]
+    runtimeclass MainPage : Windows.UI.Xaml.Controls.Page
+    {
+        MainPage();
+        Int32 MyProperty;
+        static MainPage Current{ get; };
+        String Text1;
+        void NotifyUser(String strMessage, NotifyType type);
+        void ClickHandlerConnect();
+    }
+
+ 
+}
